@@ -1,0 +1,283 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+
+/* =============================
+    GLOBAL SECTION STYLES
+============================= */
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.text-center p {
+    line-height: 1.8;
+}
+
+
+/* =============================
+    HERO SECTION
+============================= */
+#hero {
+    background: linear-gradient(to bottom right, #dfe9f3, #ffffff);
+    padding: 80px 20px;
+}
+
+    #hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+    }
+
+    #hero .btn {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+
+
+/* =============================
+    CARDS
+============================= */
+.card {
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    .card h4,
+    .card h3 {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+
+/* =============================
+    BUTTONS
+============================= */
+.btn-primary {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+}
+
+    .btn-primary:hover {
+        background-color: #1d4ed8 !important;
+    }
+
+.btn-outline-primary {
+    border-color: #2563eb !important;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #2563eb !important;
+        color: #fff !important;
+    }
+
+
+/* =============================
+    CONTACT SECTION
+============================= */
+#contact .contact-info p {
+    margin: 5px 0;
+    font-size: 1.05rem;
+}
+
+#contact .form-label {
+    font-weight: 600;
+}
+
+#contact button {
+    width: 180px;
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Make inputs nicer */
+#contact input,
+#contact textarea {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+    #contact input:focus,
+    #contact textarea:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+    }
+
+
+/* =============================
+    RTL SUPPORT (Optional)
+============================= */
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+form label,
+form input,
+form textarea {
+    text-align: right;
+}
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+
+/* Extra small screens (0–576px) */
+@media (max-width: 576px) {
+
+    /* HERO */
+    #hero {
+        padding: 50px 10px;
+        text-align: center;
+    }
+
+        #hero h1 {
+            font-size: 2rem;
+        }
+
+        #hero p {
+            font-size: 1rem;
+        }
+
+        #hero .btn {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+    /* SECTIONS */
+    section {
+        padding: 40px 15px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    /* CARDS STACK */
+    .card {
+        margin-bottom: 15px;
+    }
+
+    /* CONTACT layout stacked */
+    #contact .row {
+        flex-direction: column;
+    }
+
+    #contact .col-md-5,
+    #contact .col-md-7 {
+        width: 100% !important;
+    }
+
+    #contact button {
+        width: 100%;
+    }
+
+    /* Inputs full width */
+    #contact input,
+    #contact textarea {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* Small screens (576–768px) */
+@media (max-width: 768px) {
+
+    #hero h1 {
+        font-size: 2.4rem;
+    }
+
+    #hero p {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    /* Cards layout becomes 2 columns */
+    .row.g-4 > div.col-md-4 {
+        width: 50%;
+        padding: 10px;
+    }
+}
+
+
+/* Medium screens (768–992px) */
+@media (max-width: 992px) {
+
+    #hero h1 {
+        font-size: 2.6rem;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    /* Contact two columns but tighter */
+    #contact .col-md-5 {
+        margin-bottom: 25px;
+    }
+}
+
+
+/* Large screens (1200px+) */
+@media (min-width: 1200px) {
+
+    #hero h1 {
+        font-size: 3.2rem;
+    }
+
+    #hero p {
+        font-size: 1.25rem;
+    }
+
+    section {
+        padding: 70px 80px;
+    }
+}

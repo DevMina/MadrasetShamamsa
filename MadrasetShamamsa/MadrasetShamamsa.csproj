@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Melodies\Annual\" />
+    <Folder Include="Views\Melodies\Christmas\" />
+    <Folder Include="Views\Melodies\Epiphany\" />
+    <Folder Include="Views\Melodies\Great-Lent\" />
+    <Folder Include="Views\Melodies\Holy-Week\" />
+    <Folder Include="Views\Melodies\Kiahk\" />
+  </ItemGroup>
+
+</Project>

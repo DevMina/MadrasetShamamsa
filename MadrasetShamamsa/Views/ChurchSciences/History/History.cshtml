@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Home page";
+}
+<!-- =======================
+    HERO SECTION
+======================= -->
+<section class="text-center py-5 bg-white mb-5">
+    <h1 class="display-4">
+        <i class="fa-solid fa-church mx-2 text-primary"></i>مدرسة الشمامسة
+    </h1>
+    <p class="lead">تعليم الألحان والعلوم الكنسية</p>
+</section>
+
+<!-- =======================
+    LITURGY SECTION
+======================= -->
+<section id="liturgy" class="container py-5 bg-white mb-5">
+    <h2 class="text-center mb-4"><i class="bi bi-music-note-beamed mx-2 text-primary"></i>مكتبة الألحان</h2>
+
+    <p class="text-center w-75 mx-auto mb-4">
+        تحتوي مكتبة الألحان على تقسيمات شاملة لكل المناسبات الكنسية، مرفقة بالشرح
+        والتسجيلات، لمساعدة الدارس على فهم اللحن ومناسبته داخل طقس الكنيسة.
+    </p>
+
+    <div class="text-center mt-3">
+        <a href="/Liturgy" class="btn btn-primary btn-lg">الدخول إلى مكتبة الألحان</a>
+    </div>
+</section>
+
+<!-- =======================
+    CHURCH SCIENCES
+======================= -->
+<section id="church-sciences" class="container py-5 bg-white mb-5">
+    <h2 class="text-center mb-4"><i class="bi bi-book-half mx-2 text-primary"></i>قسم العلوم الكنسية</h2>
+
+    <p class="text-center w-75 mx-auto mb-4">
+        يشمل هذا القسم دراسة الطقس القبطي، العقيدة، اللغة القبطية، وتاريخ الكنيسة.
+        تم تنظيم المواد بطريقة مبسطة وواضحة تساعد الدارس على فهم الأسس الروحية
+        والليتورچية للكنيسة القبطية.
+    </p>
+
+    <div class="text-center mt-3">
+        <a href="/ChurchSciences" class="btn btn-primary btn-lg">الدخول إلى العلوم الكنسية</a>
+    </div>
+</section>
+
+<!-- =======================
+    ABOUT
+======================= -->
+<section id="about" class="container py-5 bg-white mb-5">
+    <h2 class="text-center mb-3"><i class="bi bi-people-fill mx-2 text-primary"></i>من نحن</h2>
+    <p class="text-center w-75 mx-auto">
+        مدرسة الشمامسة تهدف إلى تعليم الألحان والتراث الكنسي وتقديم منهج سليم
+        قائم على الطقس القبطي والعلوم الكنسية، لإعداد شماس خادم ودارس.
+    </p>
+</section>
+
+<!-- =======================
+    CONTACT (WITH FORM)
+======================= -->
+<section id="contact" class="container py-5 bg-white mb-5">
+    <h2 class="text-center mb-4"><i class="bi bi-envelope-fill mx-2 text-primary"></i>اتصل بنا</h2>
+    <h5 class="text-center mb-4">أي تعليق أو اقتراح هيفيدنا جداً</h5>
+
+    <div class="row">
+        <div class="col-md-7 mx-auto">
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label"><i class="bi bi-person-fill mx-2 text-primary"></i>الاسم</label>
+                    <input type="text" name="name" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label"><i class="bi bi-envelope-at-fill mx-2 text-primary"></i>البريد الإلكتروني</label>
+                    <input type="email" name="email" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label"><i class="bi bi-phone-fill mx-2 text-primary"></i>الموبايل</label>
+                    <input type="tel" name="mobile" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label"><i class="bi bi-chat-left-dots-fill mx-2 text-primary"></i>الرسالة</label>
+                    <textarea name="message" class="form-control" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">إرسال</button>
+            </form>
+        </div>
+    </div>
+</section>

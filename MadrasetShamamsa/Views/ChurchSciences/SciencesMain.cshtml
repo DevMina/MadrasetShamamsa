@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "العلوم الكنسية";
+}
+
+<!-- =======================
+    HERO / INTRO SECTION
+======================= -->
+<section class="text-center py-5 bg-light mb-5">
+    <div class="container">
+        <h1 class="display-4 mb-3">
+            <i class="fa-solid fa-book-open me-2 text-primary"></i>العلوم الكنسية
+        </h1>
+        <p class="lead w-75 mx-auto">
+            في هذا القسم يمكنك الوصول إلى جميع المواد التعليمية للشمامسة، بما في ذلك
+            اللغة القبطية، العقيدة الكنسية، تاريخ الكنيسة، والطقس القبطي.
+        </p>
+    </div>
+</section>
+
+<!-- =======================
+    SCIENCES CARDS
+======================= -->
+<section class="container py-5">
+    <div class="row g-4">
+
+        <!-- Coptic -->
+        <div class="col-md-3">
+            <div class="card h-100 p-3 text-center">
+                <i class="fa-solid fa-book fa-2x mb-3 text-primary"></i>
+                <h4>اللغة القبطية</h4>
+                <p>تعلم القراءة والكتابة باللغة القبطية بطريقة مبسطة مع تمارين عملية.</p>
+                <a href="@Url.Action("Coptic")" class="btn btn-primary mt-3">عرض القسم</a>
+            </div>
+        </div>
+
+        <!-- Rite -->
+        <div class="col-md-3">
+            <div class="card h-100 p-3 text-center">
+                <i class="fa-solid fa-pray fa-2x mb-3 text-primary"></i>
+                <h4>الطقس القبطي</h4>
+                <p>الصلوات اليومية، القداسات، المناسبات السنوية، وأوقات الصوم والأعياد.</p>
+                <a href="@Url.Action("Rite")" class="btn btn-primary mt-3">عرض القسم</a>
+            </div>
+        </div>
+
+        <!-- Dogma -->
+        <div class="col-md-3">
+            <div class="card h-100 p-3 text-center">
+                <i class="fa-solid fa-gavel fa-2x mb-3 text-primary"></i>
+                <h4>العقيدة الكنسية</h4>
+                <p>دراسة الثالوث، المسيح، الكنيسة، والأسرار المقدسة.</p>
+                <a href="@Url.Action("Dogma")" class="btn btn-primary mt-3">عرض القسم</a>
+            </div>
+        </div>
+
+        <!-- History -->
+        <div class="col-md-3">
+            <div class="card h-100 p-3 text-center">
+                <i class="fa-solid fa-church fa-2x mb-3 text-primary"></i>
+                <h4>تاريخ الكنيسة</h4>
+                <p>أهم الأحداث، آباء الكنيسة، والأعياد المقدسة التي شكلت الطقس والعقيدة.</p>
+                <a href="@Url.Action("History")" class="btn btn-primary mt-3">عرض القسم</a>
+            </div>
+        </div>
+
+    </div>
+</section>
