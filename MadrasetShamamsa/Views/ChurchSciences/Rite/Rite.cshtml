@@ -1,55 +1,201 @@
 ﻿@{
     ViewData["Title"] = "الطقس الكنسي";
 }
-<section class="bg-white px-0 py-3">
+
+<!-- =======================
+    HERO / INTRO SECTION
+======================= -->
+<section class="container text-center py-3 bg-white">
+    <div>
+        <h1 class="mb-3">
+            <i class="fa-solid fa-pray mx-2 text-primary"></i>الطقس الكنسي
+        </h1>
+        <p class="mx-auto">
+            تعرف على الطقوس والصلوات والتقاليد الكنسية التي تنظم حياة الكنيسة القبطية الأرثوذكسية
+        </p>
+    </div>
+</section>
+
+<section class="container py-3">
     <!-- =======================
-        HERO / INTRO SECTION
+        ما هو الطقس الكنسي
     ======================= -->
-    <section class="py-3">
-        <div class="container">
-            <h1 class="mb-3">الطقس الكنسي</h1>
-            <p class="mx-auto">
-                <span>كلمة طقس مأخوذة من الكلمة اليونانية 'طاكسيس' والتى تعنى ترتيب أو نظام ويقصد به النظام أو الترتيب الكنسى. ويشمل :</span>
-                <ul>
-                    <li>الصلوات الكنسية (الليتورجيا) : والليتورجيا كلمة تعنى الصلوات الجماعية أو صلوات الشعب.</li>
-                    <li>الأعياد : حيث أن الأعياد الكنسية لها مواعيد محددة وصلوات محددة ومعروفة تصلى فى كل عيد.</li>
-                    <li>أسرار الكنيسة : تعتبر أسرار الكنيسة من أسس الأرثوذكسية.</li>
-                    <li>الدورات الزمنية فى الكنيسة.</li>
-                    <li>القراءات الكنسية : هى أيضاً مرتبة فى القطمارس، ومعروفة لكل يوم قراءاته.</li>
-                    <li>ألحان الكنيسة : مرتبة لكل مناسبة ألحان خاصة بها ولا يجب أن تقال الألحان فى غير مواضعها.</li>
-                    <li>الأيقونات : حيث أن للأيقونات نظم متبعة فى رسمها لتخرج بصورة منظمة لائقة والأيقونة القبطية لها معايير كثيرة لقراءتها.</li>
-                </ul>
+    <div class="card shadow-sm mb-4">
+        <div class="card-body p-4">
+            <h2 class="mb-4"><i class="bi bi-info-circle mx-2 text-primary"></i>ما هو الطقس الكنسي؟</h2>
+            <p>
+                كلمة طقس مأخوذة من الكلمة اليونانية 'طاكسيس' والتى تعنى ترتيب أو نظام ويقصد به النظام أو الترتيب الكنسى ويشمل:
+            </p>
+            <ul class="list-unstyled pe-3">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary ms-2"></i>الصلوات الكنسية (الليتورجيا): والليتورجيا كلمة تعنى الصلوات الجماعية أو صلوات الشعب</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary ms-2"></i>الأعياد: حيث أن الأعياد الكنسية لها مواعيد محددة وصلوات محددة ومعروفة تصلى فى كل عيد</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary ms-2"></i>أسرار الكنيسة: تعتبر أسرار الكنيسة من أسس الأرثوذكسية</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary ms-2"></i>الدورات الزمنية فى الكنيسة</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary ms-2"></i>القراءات الكنسية: هى أيضاً مرتبة فى القطمارس، ومعروفة لكل يوم قراءاته</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary ms-2"></i>ألحان الكنيسة: مرتبة لكل مناسبة ألحان خاصة بها ولا يجب أن تقال الألحان فى غير مواضعها</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary ms-2"></i>الأيقونات: حيث أن للأيقونات نظم متبعة فى رسمها لتخرج بصورة منظمة لائقة والأيقونة القبطية لها معايير كثيرة لقراءتها</li>
+            </ul>
+            <hr class="my-4">
+            <h2 class="mb-4"><i class="bi bi-lightbulb mx-2 text-primary"></i>أسباب وضع الطقوس الكنسية وأهميتها</h2>
+            <ul class="list-unstyled pe-3">
+                <li class="mb-2"><i class="bi bi-star-fill text-warning ms-2"></i>الطقس يوحد الكنيسة: لتكون كلها واحد فى المسيح حيث أن الكنيسة هى جسد المسيح والمسيح له جسد واحد غير منقسم</li>
+                <li class="mb-2"><i class="bi bi-star-fill text-warning ms-2"></i>الطقس يضمن جماعية الأداء: حيث أن الشعب جزء أساسى من أداء القداس وإتمامه فجميعنا نصلى بروح واحدة وكلام واحد فى وقت واحد</li>
+                <li class="mb-2"><i class="bi bi-star-fill text-warning ms-2"></i>الطقس يشرح العقيدة ويضمن الحفاظ عليها سليمة: الطقس هو التطبيق العملى للعقيدة وهو المدرسة الأولى التى تشرح العقيدة من خلال تطبيقها</li>
+                <li class="mb-2"><i class="bi bi-star-fill text-warning ms-2"></i>الطقس يشرح حقائق مجردة: حيث أنه يوضح أشياء لا يمكن أن يستوعبها إلا العقل المجرد</li>
+                <li class="mb-2"><i class="bi bi-star-fill text-warning ms-2"></i>الطقس يعلن قداسة المادة: حيث أنه باستخدام المادة فى الأسرار نقدسها ونرفض كل الآراء التى ترفض المادة</li>
+            </ul>
+            <p class="text-muted fst-italic mt-4 mb-0">
+                <i class="bi bi-person-circle ms-2"></i>من مقال نيافة الأنبا رافائيل
             </p>
         </div>
-        <div class="container">
-            <h1 class="mb-3">أسباب وضع الطقوس الكنسية وأهميتها</h1>
-            <p class="mx-auto">
-                <ul>
-                    <li>الطقس يوحد الكنيسة : لتكون كلها واحد فى المسيح حيث أن الكنيسة هى جسد المسيح والمسيح له جسد واحد غير منقسم.</li>
-                    <li>الطقس يضمن جماعية الأداء : حيث أن الشعب جزء أساسى من أداء القداس وإتمامه فجميعنا نصلى بروح واحدة وكلام واحد فى وقت واحد.</li>
-                    <li>الطقس يشرح العقيدة ويضمن الحفاظ عليها سليمة : الطقس هو التطبيق العملى للعقيدة وهو المدرسة الأولى التى تشرح العقيدة من خلال تطبيقها.</li>
-                    <li>الطقس يشرح حقائق مجردة : حيث أنه يوضح أشياء لا يمكن أن يستوعبها إلا العقل المجرد.</li>
-                    <li>الطقس يعلن قداسة المادة : حيث أنه باستخدام المادة فى الأسرار نقدسها ونرفض كل الآراء التى ترفض المادة.</li>
-                    <li>ألحان الكنيسة : مرتبة لكل مناسبة ألحان خاصة بها ولا يجب أن تقال الألحان فى غير مواضعها.</li>
-                    <li>الأيقونات : حيث أن للأيقونات نظم متبعة فى رسمها لتخرج بصورة منظمة لائقة والأيقونة القبطية لها معايير كثيرة لقراءتها.</li>
-                </ul>
-            </p>
+    </div>
+
+    <!-- =======================
+        مصادر الطقوس
+    ======================= -->
+    <div class="card shadow-sm mb-5">
+        <div class="card-body p-4">
+            <h2 class="mb-4"><i class="bi bi-book mx-2 text-primary"></i>مصادر الطقوس الكنسية</h2>
+            <ul class="list-unstyled pe-3">
+                <li class="mb-2"><i class="bi bi-bookmark-fill text-success ms-2"></i>الكتاب المقدس: يعتبر المصدر الأساسي للطقوس، بالإضافة إلى الوحي الإلهي بشكل عام</li>
+                <li class="mb-2"><i class="bi bi-bookmark-fill text-success ms-2"></i>التقليد المقدس: يشمل ما سُجّل في قوانين الآباء الرسل (الدسقولية) وتعاليمهم</li>
+                <li class="mb-2"><i class="bi bi-bookmark-fill text-success ms-2"></i>المجامع المسكونية: قرارات المجامع التي يُعتمدها الكنيسة هي مصدر مهم للطقوس</li>
+                <li class="mb-2"><i class="bi bi-bookmark-fill text-success ms-2"></i>تعاليم آباء الكنيسة: أقوال وتعاليم آباء الكنيسة الذين نقلوا التعاليم والتقاليد الرسولية</li>
+            </ul>
         </div>
-        <div class="container">
-            <h3 class="mb-3 text-start">من مقال نيافة الأنبا رافائيل</h3>
-        </div>
-    </section>
-    <section class="py-3">
-        <div class="container">
-            <h1 class="mb-3">مصادر الطقوس الكنسية</h1>
-            <p class="mx-auto">
-                <ul>
-                    <li>الكتاب المقدس: يعتبر المصدر الأساسي للطقوس، بالإضافة إلى الوحي الإلهي بشكل عام.</li>
-                    <li>التقليد المقدس: يشمل ما سُجّل في قوانين الآباء الرسل (الدسقولية) وتعاليمهم.</li>
-                    <li>المجامع المسكونية: قرارات المجامع التي يُعتمدها الكنيسة هي مصدر مهم للطقوس.</li>
-                    <li>تعاليم آباء الكنيسة: أقوال وتعاليم آباء الكنيسة الذين نقلوا التعاليم والتقاليد الرسولية.</li>
-                </ul>
-            </p>
+    </div>
+
+    <!-- =======================
+        موضوعات الطقس
+    ======================= -->
+    <section class="container py-3 bg-white">
+        <h2 class="mb-4 text-center"><i class="bi bi-collection mx-2 text-primary"></i>موضوعات الطقس الكنسي</h2>
+        <div class="row g-4">
+            <!-- القداس الإلهي -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm text-center">
+                    <div class="card-body d-flex flex-column">
+                        <i class="bi bi-cup-hot text-primary fs-1 mb-3"></i>
+                        <h5 class="card-title">القداس الإلهي</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            دراسة القداس الإلهي وأجزائه ومعانيه الروحية والطقسية
+                        </p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الأسرار السبعة -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm text-center">
+                    <div class="card-body d-flex flex-column">
+                        <i class="bi bi-droplet-fill text-primary fs-1 mb-3"></i>
+                        <h5 class="card-title">الأسرار السبعة</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            المعمودية، الميرون، التوبة، الإفخارستيا، الزيجة، الكهنوت، مسحة المرضى
+                        </p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- السنة الطقسية -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm text-center">
+                    <div class="card-body d-flex flex-column">
+                        <i class="bi bi-calendar3 text-primary fs-1 mb-3"></i>
+                        <h5 class="card-title">السنة الطقسية</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            الأعياد السيدية والصغرى، الأصوام، والمناسبات الكنسية عبر السنة
+                        </p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الصلوات اليومية -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm text-center">
+                    <div class="card-body d-flex flex-column">
+                        <i class="bi bi-clock text-primary fs-1 mb-3"></i>
+                        <h5 class="card-title">الصلوات اليومية</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            صلوات الأجبية السبع: باكر، الثالثة، السادسة، التاسعة، الغروب، النوم، نصف الليل
+                        </p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الألحان الكنسية -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm text-center">
+                    <div class="card-body d-flex flex-column">
+                        <i class="bi bi-music-note-beamed text-primary fs-1 mb-3"></i>
+                        <h5 class="card-title">الألحان الكنسية</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            دراسة الألحان السنوية والموسمية ودورها في الطقس الكنسي
+                        </p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الأيقونات -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm text-center">
+                    <div class="card-body d-flex flex-column">
+                        <i class="bi bi-image text-primary fs-1 mb-3"></i>
+                        <h5 class="card-title">الأيقونات</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            فن الأيقونة القبطية ومعانيها الروحية ودورها في العبادة
+                        </p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- القراءات الكنسية -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm text-center">
+                    <div class="card-body d-flex flex-column">
+                        <i class="bi bi-journal-text text-primary fs-1 mb-3"></i>
+                        <h5 class="card-title">القراءات الكنسية</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            القطمارس السنوي وقراءات كل يوم من الكتاب المقدس
+                        </p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الملابس الكهنوتية -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm text-center">
+                    <div class="card-body d-flex flex-column">
+                        <i class="bi bi-award text-primary fs-1 mb-3"></i>
+                        <h5 class="card-title">الملابس الكهنوتية</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            الملابس الكهنوتية ومعانيها الروحية ودلالاتها الطقسية
+                        </p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الأواني المقدسة -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm text-center">
+                    <div class="card-body d-flex flex-column">
+                        <i class="bi bi-disc text-primary fs-1 mb-3"></i>
+                        <h5 class="card-title">الأواني المقدسة</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            الكأس، الصينية، المذبح، وباقي الأواني المستخدمة في الطقس
+                        </p>
+                        <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </section>

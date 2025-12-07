@@ -1,17 +1,18 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - مدرسة الشمامسة - كنيسة رئيس الملائكة الجليل رافائيل بالمعادي</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MadrasetShamamsa.styles.css" asp-append-version="true" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<body>
+<body dir="rtl">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -25,17 +26,10 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Melodies" asp-action="MelodiesMain"><i class="fas fa-lg fa-headphones text-primary"></i> ألحان</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-dark dropdown-toggle" href="#" id="churchSciencesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="ChurchSciences" asp-action="SciencesMain">
                                 <i class="fas fa-lg fa-church text-primary"></i> علوم كنسية
                             </a>
-
-                            <ul class="dropdown-menu" aria-labelledby="churchSciencesDropdown">
-                                <li class="text-end"><a class="dropdown-item" asp-controller="ChurchSciences" asp-action="Coptic">قبطي</a></li>
-                                <li class="text-end"><a class="dropdown-item" asp-controller="ChurchSciences" asp-action="Rite">طقس</a></li>
-                                <li class="text-end"><a class="dropdown-item" asp-controller="ChurchSciences" asp-action="Dogma">عقيدة</a></li>
-                                <li class="text-end"><a class="dropdown-item" asp-controller="ChurchSciences" asp-action="History">تاريخ كنيسة</a></li>
-                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -48,8 +42,8 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container text-center">
+    <footer class="border-top footer text-muted position-relative">
+        <div class="position-relative">
             &copy; 2025 - مدرسة شمامسة رئيس الملائكة الجليل رافائيل
         </div>
     </footer>

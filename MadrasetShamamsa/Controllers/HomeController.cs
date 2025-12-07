@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using MadrasetShamamsa.Interfaces;
 using MadrasetShamamsa.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,8 +7,15 @@ namespace MadrasetShamamsa.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ICopticDateService _copticDateService;
+
+        public HomeController(ICopticDateService copticDateService)
+        {
+            _copticDateService = copticDateService;
+        }
         public IActionResult Index()
         {
+            ViewBag.CopticDate = _copticDateService.ToCopticDate(DateTime.Now);
             return View();
         }
 

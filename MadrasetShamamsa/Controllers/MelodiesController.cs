@@ -10,6 +10,10 @@ namespace MadrasetShamamsa.Controllers
         {
             return View();
         }
+        public IActionResult AnnualMain()
+        {
+            return View("~/Views/Melodies/Annual/AnnualMain.cshtml");
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

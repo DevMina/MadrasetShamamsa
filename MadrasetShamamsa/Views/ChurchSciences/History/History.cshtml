@@ -1,92 +1,105 @@
 ﻿@{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "تاريخ الكنيسة";
 }
-<!-- =======================
-    HERO SECTION
-======================= -->
-<section class="text-center py-5 bg-white mb-5">
-    <h1 class="display-4">
-        <i class="fa-solid fa-church mx-2 text-primary"></i>مدرسة الشمامسة
-    </h1>
-    <p class="lead">تعليم الألحان والعلوم الكنسية</p>
-</section>
 
-<!-- =======================
-    LITURGY SECTION
-======================= -->
-<section id="liturgy" class="container py-5 bg-white mb-5">
-    <h2 class="text-center mb-4"><i class="bi bi-music-note-beamed mx-2 text-primary"></i>مكتبة الألحان</h2>
-
-    <p class="text-center w-75 mx-auto mb-4">
-        تحتوي مكتبة الألحان على تقسيمات شاملة لكل المناسبات الكنسية، مرفقة بالشرح
-        والتسجيلات، لمساعدة الدارس على فهم اللحن ومناسبته داخل طقس الكنيسة.
-    </p>
-
-    <div class="text-center mt-3">
-        <a href="/Liturgy" class="btn btn-primary btn-lg">الدخول إلى مكتبة الألحان</a>
+<section class="container py-3 text-center bg-white mb-5">
+    <div>
+        <h1 class="mb-3"><i class="fa-solid fa-church mx-2 text-primary"></i>تاريخ الكنيسة</h1>
+        <p class="mx-auto">
+            اكتشف مسيرة الكنيسة منذ تأسيسها في العصر الرسولي، مرورًا بالآباء، والمجامع، والأحداث التاريخية
+            التي شكّلت إيماننا وتقليدنا عبر القرون
+        </p>
     </div>
 </section>
 
-<!-- =======================
-    CHURCH SCIENCES
-======================= -->
-<section id="church-sciences" class="container py-5 bg-white mb-5">
-    <h2 class="text-center mb-4"><i class="bi bi-book-half mx-2 text-primary"></i>قسم العلوم الكنسية</h2>
+<section class="container py-3 bg-white">
 
-    <p class="text-center w-75 mx-auto mb-4">
-        يشمل هذا القسم دراسة الطقس القبطي، العقيدة، اللغة القبطية، وتاريخ الكنيسة.
-        تم تنظيم المواد بطريقة مبسطة وواضحة تساعد الدارس على فهم الأسس الروحية
-        والليتورچية للكنيسة القبطية.
-    </p>
+    <div class="row g-4">
 
-    <div class="text-center mt-3">
-        <a href="/ChurchSciences" class="btn btn-primary btn-lg">الدخول إلى العلوم الكنسية</a>
-    </div>
-</section>
-
-<!-- =======================
-    ABOUT
-======================= -->
-<section id="about" class="container py-5 bg-white mb-5">
-    <h2 class="text-center mb-3"><i class="bi bi-people-fill mx-2 text-primary"></i>من نحن</h2>
-    <p class="text-center w-75 mx-auto">
-        مدرسة الشمامسة تهدف إلى تعليم الألحان والتراث الكنسي وتقديم منهج سليم
-        قائم على الطقس القبطي والعلوم الكنسية، لإعداد شماس خادم ودارس.
-    </p>
-</section>
-
-<!-- =======================
-    CONTACT (WITH FORM)
-======================= -->
-<section id="contact" class="container py-5 bg-white mb-5">
-    <h2 class="text-center mb-4"><i class="bi bi-envelope-fill mx-2 text-primary"></i>اتصل بنا</h2>
-    <h5 class="text-center mb-4">أي تعليق أو اقتراح هيفيدنا جداً</h5>
-
-    <div class="row">
-        <div class="col-md-7 mx-auto">
-            <form method="post">
-                <div class="mb-3">
-                    <label class="form-label"><i class="bi bi-person-fill mx-2 text-primary"></i>الاسم</label>
-                    <input type="text" name="name" class="form-control" required />
+        <!-- البطاقة 1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm text-center">
+                <div class="card-body d-flex flex-column">
+                    <i class="bi bi-book-half text-primary fs-1 mb-3"></i>
+                    <h5 class="card-title">العصور الرسولية</h5>
+                    <p class="card-text text-muted flex-grow-1">
+                        دراسة تاريخ الكنيسة في القرن الأول وخدمة الرسل وانتشار المسيحية الأولى
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
                 </div>
-
-                <div class="mb-3">
-                    <label class="form-label"><i class="bi bi-envelope-at-fill mx-2 text-primary"></i>البريد الإلكتروني</label>
-                    <input type="email" name="email" class="form-control" required />
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label"><i class="bi bi-phone-fill mx-2 text-primary"></i>الموبايل</label>
-                    <input type="tel" name="mobile" class="form-control" required />
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label"><i class="bi bi-chat-left-dots-fill mx-2 text-primary"></i>الرسالة</label>
-                    <textarea name="message" class="form-control" rows="5" required></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary w-100">إرسال</button>
-            </form>
+            </div>
         </div>
+
+        <!-- البطاقة 2 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm text-center">
+                <div class="card-body d-flex flex-column">
+                    <i class="bi bi-people-fill text-primary fs-1 mb-3"></i>
+                    <h5 class="card-title">عصر الآباء</h5>
+                    <p class="card-text text-muted flex-grow-1">
+                        التعرف على كتابات الآباء الأولين وتعاليمهم التي أثّرت في الكنيسة والمسكونة
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- البطاقة 3 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm text-center">
+                <div class="card-body d-flex flex-column">
+                    <i class="bi bi-bank text-primary fs-1 mb-3"></i>
+                    <h5 class="card-title">المجامع المسكونية</h5>
+                    <p class="card-text text-muted flex-grow-1">
+                        دراسة المجامع الكبرى التي حدّدت قوانين الإيمان ورسخت العقيدة الأرثوذكسية
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- البطاقة 4 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm text-center">
+                <div class="card-body d-flex flex-column">
+                    <i class="bi bi-shield-check text-primary fs-1 mb-3"></i>
+                    <h5 class="card-title">عصر الاضطهادات</h5>
+                    <p class="card-text text-muted flex-grow-1">
+                        قصص الشهداء وثبات الكنيسة في فترات الاضطهاد الروماني والوثني
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- البطاقة 5 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm text-center">
+                <div class="card-body d-flex flex-column">
+                    <i class="bi bi-globe2 text-primary fs-1 mb-3"></i>
+                    <h5 class="card-title">انتشار المسيحية</h5>
+                    <p class="card-text text-muted flex-grow-1">
+                        كيف انتشرت المسيحية عبر العالم ودور الكنائس المختلفة في نشر البشارة
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- البطاقة 6 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm text-center">
+                <div class="card-body d-flex flex-column">
+                    <i class="bi bi-archive text-primary fs-1 mb-3"></i>
+                    <h5 class="card-title">تاريخ الكنيسة القبطية</h5>
+                    <p class="card-text text-muted flex-grow-1">
+                        جذور الكنيسة القبطية، البابوات، الأديرة، والرهبنة المصرية وتأثيرها العالمي
+                    </p>
+                    <a href="#" class="btn btn-outline-primary mt-auto">عرض التفاصيل</a>
+                </div>
+            </div>
+        </div>
+
     </div>
+
 </section>

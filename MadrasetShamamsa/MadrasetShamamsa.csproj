@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Melodies\Annual\" />
     <Folder Include="Views\Melodies\Christmas\" />
     <Folder Include="Views\Melodies\Epiphany\" />
     <Folder Include="Views\Melodies\Great-Lent\" />
     <Folder Include="Views\Melodies\Holy-Week\" />
     <Folder Include="Views\Melodies\Kiahk\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NodaTime" Version="3.2.2" />
   </ItemGroup>
 
 </Project>
