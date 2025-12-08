@@ -1,415 +1,79 @@
 ﻿@{
     ViewData["Title"] = "ألحان السنوي";
+    var sections = new List<(string id, string name)>
+    {
+        ("1","رفع بخور عشية وباكر"),
+        ("2","ألحان قداس الموعوظين"),
+        ("3","ألحان ومردات القداس الباسيلي"),
+        ("4","ألحان ومردات القداس الغريغوري"),
+        ("5","الألحان الكبيرة لمردات الشماس داخل الهيكل"),
+        ("6","ألحان ومدائح التوزيع السنوي")
+    };
+    var subSections = new List<(string sectionId, string name, string controller, string action)>
+    {
+        ("1", "صلاة الشكر","",""),
+        ("1", "أرباع الناقوس","",""),
+        ("1", "الأواشي","",""),
+        ("1", "الذكصولوجيات","",""),
+        ("1", "أوشية الإنجيل","",""),
+        ("1", "الختام","",""),
+
+        ("2", "لحن البركة","",""),
+        ("2", "لحن إك إسماروؤت","",""),
+        ("2", "لحن إفلوجيمنوس","",""),
+
+        ("3", "قانون الإيمان","",""),
+        ("3", "صلاة الصلح","",""),
+
+        ("4", "صلاة الصلح","",""),
+
+        ("5", "أوشية القرابين","",""),
+
+        ("6", "التوزيع السنوي","",""),
+    };
 }
 
-<section class="py-5 text-center bg-light">
+<section class="py-3 text-center bg-light">
     <div class="container">
         <h1 class="mb-3">ألحان السنوي</h1>
         <p class="lead text-muted">
-            الألحان التي تُرتَّل في الأيام العادية طوال السنة القبطية خارج المواسم الكبرى.
+            الألحان التي تُرتَّل في الأيام العادية طوال السنة القبطية خارج المواسم الكبرى.
         </p>
     </div>
 </section>
 
-<!-- =======================
-    SECTION 1 — الأواشي السنوية
-======================= -->
-<section class="py-5">
+<section class="py-3">
     <div class="container">
-        <h2 class="mb-4 text-primary text-center">
-            <i class="bi bi-journal-check me-2"></i>رفع بخور عشية وباكر
-        </h2>
-
-        <div class="row g-4">
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-hearts fs-1 text-primary mb-3"></i>
-                        <h5>صلاة الشكر</h5>
+        <div class="accordion" id="sectionsAccordion">
+            @foreach (var sec in sections)
+            {
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button @(sec.id != "1" ? "collapsed" : "")" type="button" data-bs-toggle="collapse" data-bs-target="#section@(sec.id.Trim())" aria-expanded="@(sec.id == "1" ? "true" : "false")" aria-controls="section@(sec.id.Trim())">
+                            <i class="fa-solid fa-cross mx-2"></i>
+                            @sec.name
+                        </button>
+                    </h2>
+                    <div id="section@(sec.id.Trim())" class="accordion-collapse collapse @(sec.id == "1" ? "show" : "")" data-bs-parent="#sectionsAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-4">
+                                @foreach (var subSec in subSections.Where(i => i.sectionId.Trim().Equals(sec.id.Trim())))
+                                {
+                                    <div class="col-md-4">
+                                        <a asp-controller="@subSec.controller" asp-action="@subSec.action" class="text-decoration-none">
+                                            <div class="card text-center h-100 shadow-sm card-hover">
+                                                <div class="card-body">
+                                                    <h5 class="mb-0 text-dark">@subSec.name</h5>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-people fs-1 text-primary mb-3"></i>
-                        <h5>ارباع الناقوس</h5>                        
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-            <!-- Card -->
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-airplane fs-1 text-primary mb-3"></i>
-                        <h5>الأواشي</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- =======================
-    SECTION 2 — مردات المزامير
-======================= -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <h2 class="mb-4 text-primary text-center">
-            <i class="bi bi-music-note-beamed me-2"></i>ألحان قداس الموعوظين
-        </h2>
-
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-sunrise fs-1 text-primary mb-3"></i>
-                        <h5>مرد باكر السنوي</h5>
-                        <p class="text-muted">مرد المزمور المرتل صباحًا في الأيام العادية.</p>
-                        <a href="#" class="btn btn-outline-primary">عرض</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-brightness-high fs-1 text-primary mb-3"></i>
-                        <h5>مرد القداس السنوي</h5>
-                        <p class="text-muted">مرد المزمور المستخدم قبل قراءة الإنجيل.</p>
-                        <a href="#" class="btn btn-outline-primary">عرض</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-patch-check fs-1 text-primary mb-3"></i>
-                        <h5>المردات التعليمية</h5>
-                        <p class="text-muted">مجموعة مردات تعليمية للدارسين والمبتدئين.</p>
-                        <a href="#" class="btn btn-outline-primary">عرض</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- =======================
-    SECTION 3 — ألحان القداس السنوي
-======================= -->
-<section class="py-5">
-    <div class="container">
-        <h2 class="mb-4 text-primary text-center">
-            <i class="bi bi-cross me-2"></i>ألحان ومردات القداس الباسيلي
-        </h2>
-
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-music-player fs-1 text-primary mb-3"></i>
-                        <h5>اللحن السنوي الأساسي</h5>
-                        <p class="text-muted">لحن الشعب والشمامسة في أيام السنة العادية.</p>
-                        <a href="#" class="btn btn-outline-primary">استماع</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-speaker fs-1 text-primary mb-3"></i>
-                        <h5>ألحان الأسباسموس السنوي</h5>
-                        <p class="text-muted">الأسباسموس آدام وواطس السنوي.</p>
-                        <a href="#" class="btn btn-outline-primary">عرض</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-cup fs-1 text-primary mb-3"></i>
-                        <h5>ألحان التوزيع السنوية</h5>
-                        <p class="text-muted">ألحان التوزيع المرتلة أثناء المناولة.</p>
-                        <a href="#" class="btn btn-outline-primary">استماع</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- =======================
-    SECTION 3 — ألحان القداس السنوي
-======================= -->
-<section class="py-5">
-    <div class="container">
-        <h2 class="mb-4 text-primary text-center">
-            <i class="bi bi-cross me-2"></i>ألحان ومردات القداس الغريغوري
-        </h2>
-
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-music-player fs-1 text-primary mb-3"></i>
-                        <h5>اللحن السنوي الأساسي</h5>
-                        <p class="text-muted">لحن الشعب والشمامسة في أيام السنة العادية.</p>
-                        <a href="#" class="btn btn-outline-primary">استماع</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-speaker fs-1 text-primary mb-3"></i>
-                        <h5>ألحان الأسباسموس السنوي</h5>
-                        <p class="text-muted">الأسباسموس آدام وواطس السنوي.</p>
-                        <a href="#" class="btn btn-outline-primary">عرض</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-cup fs-1 text-primary mb-3"></i>
-                        <h5>ألحان التوزيع السنوية</h5>
-                        <p class="text-muted">ألحان التوزيع المرتلة أثناء المناولة.</p>
-                        <a href="#" class="btn btn-outline-primary">استماع</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- =======================
-    SECTION 3 — ألحان القداس السنوي
-======================= -->
-<section class="py-5">
-    <div class="container">
-        <h2 class="mb-4 text-primary text-center">
-            <i class="bi bi-cross me-2"></i>الألحان الكبيرة لمردات الشماس داخل الهيكل
-        </h2>
-
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-music-player fs-1 text-primary mb-3"></i>
-                        <h5>اللحن السنوي الأساسي</h5>
-                        <p class="text-muted">لحن الشعب والشمامسة في أيام السنة العادية.</p>
-                        <a href="#" class="btn btn-outline-primary">استماع</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-speaker fs-1 text-primary mb-3"></i>
-                        <h5>ألحان الأسباسموس السنوي</h5>
-                        <p class="text-muted">الأسباسموس آدام وواطس السنوي.</p>
-                        <a href="#" class="btn btn-outline-primary">عرض</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-cup fs-1 text-primary mb-3"></i>
-                        <h5>ألحان التوزيع السنوية</h5>
-                        <p class="text-muted">ألحان التوزيع المرتلة أثناء المناولة.</p>
-                        <a href="#" class="btn btn-outline-primary">استماع</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- =======================
-    SECTION 3 — ألحان القداس السنوي
-======================= -->
-<section class="py-5">
-    <div class="container">
-        <h2 class="mb-4 text-primary text-center">
-            <i class="bi bi-cross me-2"></i>ألحان ومدائح التوزيع السنوي
-        </h2>
-
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-music-player fs-1 text-primary mb-3"></i>
-                        <h5>اللحن السنوي الأساسي</h5>
-                        <p class="text-muted">لحن الشعب والشمامسة في أيام السنة العادية.</p>
-                        <a href="#" class="btn btn-outline-primary">استماع</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-speaker fs-1 text-primary mb-3"></i>
-                        <h5>ألحان الأسباسموس السنوي</h5>
-                        <p class="text-muted">الأسباسموس آدام وواطس السنوي.</p>
-                        <a href="#" class="btn btn-outline-primary">عرض</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card text-center h-100 shadow-sm">
-                    <div class="card-body">
-                        <i class="bi bi-cup fs-1 text-primary mb-3"></i>
-                        <h5>ألحان التوزيع السنوية</h5>
-                        <p class="text-muted">ألحان التوزيع المرتلة أثناء المناولة.</p>
-                        <a href="#" class="btn btn-outline-primary">استماع</a>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>

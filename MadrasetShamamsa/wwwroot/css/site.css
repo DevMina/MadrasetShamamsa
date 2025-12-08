@@ -141,7 +141,7 @@ select.form-select {
 
 @media (max-width: 576px) {
     .card {
-        padding: 1rem !important;
+        /*padding: 1rem !important;*/
     }
 }
 
@@ -806,3 +806,22 @@ body > div[style*="position: fixed"] {
     font-size: 0.85rem;
     padding: 0.35rem 0.65rem;
 }
+.accordion-button::after {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.accordion-button:not(.collapsed)::after {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+    }
