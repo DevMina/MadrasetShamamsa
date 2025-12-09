@@ -14,6 +14,7 @@ namespace MadrasetShamamsa.Controllers
         {
             return View("~/Views/Melodies/Annual/AnnualMain.cshtml");
         }
+        public IActionResult Section1_1() => View("~/Views/Melodies/Annual/Part1/Section1_1.cshtml");
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
