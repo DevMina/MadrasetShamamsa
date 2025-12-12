@@ -153,4 +153,61 @@
 
     // Expose handler for manual triggering if needed
     window.cleanupSomeeAds = () => SomeeAdsHandler.handle();
+
+    /**
+     * Accordion Auto-Scroll Handler
+     * Automatically scrolls to accordion header when expanded
+     */
+    const AccordionScrollHandler = {
+        headerOffset: 80, // Adjust based on your fixed header height
+        scrollDuration: 400,
+
+        /**
+         * Initialize accordion scroll behavior
+         */
+        init() {
+            // Handle all accordions on the page
+            $('.accordion').each((index, accordion) => {
+                const $accordion = $(accordion);
+
+                $accordion.on('shown.bs.collapse', (event) => {
+                    this.scrollToAccordion(event);
+                });
+            });
+
+            console.info('[Accordion] Auto-scroll handler initialized');
+        },
+
+        /**
+         * Scroll to the expanded accordion
+         */
+        scrollToAccordion(event) {
+            try {
+                const $target = $(event.target).prev('.accordion-header');
+
+                if ($target.length) {
+                    const targetOffset = $target.offset().top - this.headerOffset - 20;
+
+                    $('html, body').animate({
+                        scrollTop: targetOffset
+                    }, this.scrollDuration);
+                }
+            } catch (error) {
+                console.warn('[Accordion] Error scrolling to accordion:', error);
+            }
+        },
+
+        /**
+         * Update header offset dynamically
+         */
+        updateHeaderOffset(newOffset) {
+            this.headerOffset = newOffset;
+        }
+    };
+
+    // Initialize accordion scroll handler
+    AccordionScrollHandler.init();
+
+    // Expose for external configuration if needed
+    window.updateAccordionOffset = (offset) => AccordionScrollHandler.updateHeaderOffset(offset);
 });
