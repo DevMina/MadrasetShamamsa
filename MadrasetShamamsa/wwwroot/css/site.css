@@ -53,6 +53,30 @@
     --z-custom-modal: 9009;
     --z-footer: 1000;
 }
+@font-face {
+    font-family: 'Athanasius';
+    src: url('/fonts/Athanasius.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avva_Shenouda';
+    src: url('/fonts/Avva_Shenouda.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CS Avva Shenouda';
+    src: url('/fonts/CS Avva Shenouda.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CS New Athanasius';
+    src: url('/fonts/CS New Athanasius.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* ------------------------------ */
 /* Base & Typography - RTL (Arabic) */
@@ -806,6 +830,7 @@ body > div[style*="position: fixed"] {
     font-size: 0.85rem;
     padding: 0.35rem 0.65rem;
 }
+
 .accordion-button::after {
     margin-right: auto;
     margin-left: 0;
@@ -825,3 +850,11 @@ body > div[style*="position: fixed"] {
         transform: translateY(-5px);
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
     }
+
+.beta-banner {
+    padding: 12px 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+    font-family: Tahoma;
+}

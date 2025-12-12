@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Melodies\Christmas\" />
-    <Folder Include="Views\Melodies\Epiphany\" />
-    <Folder Include="Views\Melodies\Great-Lent\" />
-    <Folder Include="Views\Melodies\Holy-Week\" />
-    <Folder Include="Views\Melodies\Kiahk\" />
+    <Folder Include="Views\Alhan\Christmas\" />
+    <Folder Include="Views\Alhan\Epiphany\" />
+    <Folder Include="Views\Alhan\Great-Lent\" />
+    <Folder Include="Views\Alhan\Holy-Week\" />
+    <Folder Include="Views\Alhan\Kiahk\" />
   </ItemGroup>
 
   <ItemGroup>
