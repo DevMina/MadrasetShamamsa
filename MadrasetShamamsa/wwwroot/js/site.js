@@ -170,8 +170,11 @@
             $('.accordion').each((index, accordion) => {
                 const $accordion = $(accordion);
 
+                // Use a small delay to let Bootstrap finish its animation first
                 $accordion.on('shown.bs.collapse', (event) => {
-                    this.scrollToAccordion(event);
+                    setTimeout(() => {
+                        this.scrollToAccordion(event);
+                    }, 50);
                 });
             });
 
@@ -183,12 +186,13 @@
          */
         scrollToAccordion(event) {
             try {
-                const $target = $(event.target).prev('.accordion-header');
+                const $accordionItem = $(event.target).closest('.accordion-item');
 
-                if ($target.length) {
-                    const targetOffset = $target.offset().top - this.headerOffset - 20;
+                if ($accordionItem.length) {
+                    const targetOffset = $accordionItem.offset().top - this.headerOffset - 20;
 
-                    $('html, body').animate({
+                    // Stop any ongoing scroll animations first
+                    $('html, body').stop().animate({
                         scrollTop: targetOffset
                     }, this.scrollDuration);
                 }
