@@ -1,6 +1,132 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿<section class="container bg-white py-4">
 
-<p>Use this page to detail your site's privacy policy.</p>
+    <div class="accordion" id="espaterAccordion">
+
+        <div class="accordion-item shadow-sm mb-3">
+            <h2 class="accordion-header" id="headingSmall">
+                <button class="accordion-button" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSmall"
+                        aria-expanded="true"
+                        aria-controls="collapseSmall">
+                    أوشية السلامة
+                </button>
+            </h2>
+
+            <div id="collapseSmall"
+                 class="accordion-collapse collapse show"
+                 aria-labelledby="headingSmall"
+                 data-bs-parent="#espaterAccordion">
+
+                <div class="accordion-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped mb-0 text-center align-middle">
+                            <tbody>
+                                <tr>
+                                    <td style="width:33%;">صلوا من أجل سلامة الواحدة المقدسة الجامعة الرسولية الأرثوذكسية كنيسة الله</td>
+                                    <td style="width:33%;">بروس أفكساستيه إيبرتيس إيرينيس تيس أجياس مونيس كاثوليكيس كيه أبوسطولوكيس أورثودوكسو تو ثيؤ أكليسياس</td>
+                                    <td style="width:33%; font-family:'Avva_Shenouda'" dir="ltr">
+                                        @Html.Raw("Procev7ac0e `vpert3c `ir3n3c t3c `ajiac mon3c ka0olik3c ke `apoctolik3c or0odo7o tov )eov ek`kl3ciac")
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="accordion-item shadow-sm mb-3">
+            <h2 class="accordion-header" id="headingLarge">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseLarge"
+                        aria-expanded="false"
+                        aria-controls="collapseLarge">
+                    أوشية الأباء
+                </button>
+            </h2>
+
+            <div id="collapseLarge"
+                 class="accordion-collapse collapse"
+                 aria-labelledby="headingLarge"
+                 data-bs-parent="#espaterAccordion">
+
+                <div class="accordion-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped mb-0 text-center align-middle">
+                            <tbody>
+                                <tr>
+                                    <td style="width:33%;">صلوا من أجل رئيس كهنتنا البابا أنبا  .  .  .  .  بابا و بطريرك ورئيس أساقفة المدينة العظمى الأسكندرية و سائر أساقفتنا الأورثوذكسين</td>
+                                    <td style="width:33%;">
+                                        بروس أفكساستيه إيبرتو أرشي إريؤس إيمون بابا أفا .  .  .  .  .  .  .  بابا كيه بطريركو كيه أرشي إبيسكوبو تيس ميجاليس بوليؤس أليكساندرياس كيه تون أوثوذكسون إيمون إبيسكويون
+                                    </td>
+                                    <td style="width:33%; font-family:'Avva_Shenouda'" dir="ltr">
+                                        @Html.Raw("Procev7ac0e `vpertov arxi`erewc `3mwn papa abba .  .  .  papa ke patriaxov ke arxi`epickopov t3c mejal3c polewc Ale7adreiac ke twn or0odo7wn `3mwn `epickopwn")
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="accordion-item shadow-sm mb-3">
+            <h2 class="accordion-header" id="headingDoxology">
+                <button class="accordion-button collapsed" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseDoxology"
+                        aria-expanded="false"
+                        aria-controls="collapseDoxology">
+                    اوشية الاجتماعات
+                </button>
+            </h2>
+
+            <div id="collapseDoxology"
+                 class="accordion-collapse collapse"
+                 aria-labelledby="headingDoxology"
+                 data-bs-parent="#espaterAccordion">
+
+                <div class="accordion-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped mb-0 text-center align-middle">
+                            <tbody>
+                                <tr>
+                                    <td style="width:33%;">صلوا من اجل هذه البيعة المقدسة واجتماعاتنا</td>
+                                    <td style="width:33%;">بروس افكصاستيه اى بيرتيس اجياس اكليسياس طاف تيس كيه طون سين ايه ليفسيه اون ايمون</td>
+                                    <td style="width:33%; font-family:'Avva_Shenouda'" dir="ltr">
+                                        @Html.Raw("`Procev7ac0e `vper t3c `ajiac ek`kl3ciac tavt3c ke twn cvn `elevcewn `3mwn")
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-primary text-white text-center">
+                <h5 class="mb-0">ان صوفيا</h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped mb-0 text-center align-middle">
+                        <tbody>
+                            <tr>
+                                <td style="width:33%;">انصتوا بحكمة الله يا رب ارحم يا رب ارحم بالحقيقة</td>
+                                <td style="width:33%;">ان صوفيا ثيؤ بروس خومين كيري اليسون كيري اليسون خين اوميثمي امين</td>
+                                <td style="width:33%; font-family:'Avva_Shenouda'" dir="ltr">
+                                    @Html.Raw("En cofi`a )eov `procxwmen : Kvri`e `el`e3con : Kvri`e `ele`3con : qen ovme0m3i")
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
