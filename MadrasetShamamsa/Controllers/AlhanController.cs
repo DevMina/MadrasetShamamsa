@@ -26,40 +26,33 @@ namespace MadrasetShamamsa.Controllers
         public IActionResult LahnEflogemenos() => View("~/Views/Alhan/Sanawy/KodasMawozen/LahnEflogemenos.cshtml");
         public IActionResult LahnEbooro() => View("~/Views/Alhan/Sanawy/KodasMawozen/LahnEbooro.cshtml");
         public IActionResult LahnAllyAbinaf() => View("~/Views/Alhan/Sanawy/KodasMawozen/LahnAllyAbinaf.cshtml");
+        public IActionResult OshytElKarabin() => View("~/Views/Alhan/Sanawy/KodasMawozen/OshytElKarabin.cshtml");
         public IActionResult LahnAlleloya() => View("~/Views/Alhan/Sanawy/KodasMawozen/LahnAlleloya.cshtml");
-        public IActionResult ZoksabatrySotes() => View("~/Views/Alhan/Sanawy/KodasMawozen/ZoksabatrySotes.cshtml");
-        public IActionResult NeSavef() => View("~/Views/Alhan/Sanawy/KodasMawozen/NeSavef.cshtml");
+        public IActionResult Esbater() => View("~/Views/Alhan/Sanawy/KodasMawozen/Esbater.cshtml");
+        public IActionResult SalatElShokrKodas() => View("~/Views/Alhan/Sanawy/KodasMawozen/SalatElShokrKodas.cshtml");
+        public IActionResult SotesNeSavef() => View("~/Views/Alhan/Sanawy/KodasMawozen/SotesNeSavef.cshtml");
         public IActionResult TayShoryTeShory() => View("~/Views/Alhan/Sanawy/KodasMawozen/TayShoryTeShory.cshtml");
         public IActionResult Hetanyat() => View("~/Views/Alhan/Sanawy/KodasMawozen/Hetanyat.cshtml");
         public IActionResult BolesCoptic() => View("~/Views/Alhan/Sanawy/KodasMawozen/BolesCoptic.cshtml");
         public IActionResult BeEhmotGhar() => View("~/Views/Alhan/Sanawy/KodasMawozen/BeEhmotGhar.cshtml");
-        public IActionResult EiAghaby() => View("~/Views/Alhan/Sanawy/KodasMawozen/EiAghaby.cshtml");
         public IActionResult Katholikon() => View("~/Views/Alhan/Sanawy/KodasMawozen/Katholikon.cshtml");
         public IActionResult KatholikonCoptic() => View("~/Views/Alhan/Sanawy/KodasMawozen/KatholikonCoptic.cshtml");
         public IActionResult Ebraksis() => View("~/Views/Alhan/Sanawy/KodasMawozen/Ebraksis.cshtml");
         public IActionResult EbraksisCoptic() => View("~/Views/Alhan/Sanawy/KodasMawozen/EbraksisCoptic.cshtml");
-        public IActionResult KhenEfran() => View("~/Views/Alhan/Sanawy/KodasMawozen/KhenEfran.cshtml");
         public IActionResult MazmorEngel() => View("~/Views/Alhan/Sanawy/KodasMawozen/MazmorEngel.cshtml");
-        //KodasBasily
+        public IActionResult AwashyKodasMawozen() => View("~/Views/Alhan/Sanawy/KodasBasily/AwashyKodasMawozen.cshtml");
         public IActionResult KanonElEman() => View("~/Views/Alhan/Sanawy/KodasBasily/KanonElEman.cshtml");
+        //KodasBasily
         public IActionResult SalatElSolhBasily() => View("~/Views/Alhan/Sanawy/KodasBasily/SalatElSolhBasily.cshtml");
         public IActionResult EfrahyYaMariam() => View("~/Views/Alhan/Sanawy/KodasBasily/EfrahyYaMariam.cshtml");
         public IActionResult HetenNeEbresviaBasily() => View("~/Views/Alhan/Sanawy/KodasBasily/HetenNeEbresviaBasily.cshtml");
         public IActionResult AyohaElRab() => View("~/Views/Alhan/Sanawy/KodasBasily/AyohaElRab.cshtml");
         public IActionResult TasbehatElSharobem() => View("~/Views/Alhan/Sanawy/KodasBasily/TasbehatElSharobem.cshtml");
-        public IActionResult MaradatToEatraf() => View("~/Views/Alhan/Sanawy/KodasBasily/MaradatToEatraf.cshtml");
-        //KodasGhorighory
-        public IActionResult SalatElSolhGreg() => View("~/Views/Alhan/Sanawy/KodasGhorighory/SalatElSolhGreg.cshtml");
-        public IActionResult HetenNeEbresviaGreg() => View("~/Views/Alhan/Sanawy/KodasGhorighory/HetenNeEbresviaGreg.cshtml");
-        public IActionResult YarabErham() => View("~/Views/Alhan/Sanawy/KodasGhorighory/YarabErham.cshtml");
-        public IActionResult MaradatToEsma() => View("~/Views/Alhan/Sanawy/KodasGhorighory/MaradatToEsma.cshtml");
-        //Maradat
-        public IActionResult OshytElKarabin() => View("~/Views/Alhan/Sanawy/Maradat/OshytElKarabin.cshtml");
-        public IActionResult EsbaterElKbera() => View("~/Views/Alhan/Sanawy/Maradat/EsbaterElKbera.cshtml");
-        public IActionResult TobhHenaElKbera() => View("~/Views/Alhan/Sanawy/Maradat/TobhHenaElKbera.cshtml");
-        public IActionResult KabeloElKbera() => View("~/Views/Alhan/Sanawy/Maradat/KabeloElKbera.cshtml");
-        public IActionResult BeNeshty() => View("~/Views/Alhan/Sanawy/Maradat/BeNeshty.cshtml");
-        public IActionResult AmenElEatrafElKbera() => View("~/Views/Alhan/Sanawy/Maradat/AmenElEatrafElKbera.cshtml");
+        public IActionResult MaradatToAwashy() => View("~/Views/Alhan/Sanawy/KodasBasily/MaradatToAwashy.cshtml");
+        public IActionResult AwashyKodas() => View("~/Views/Alhan/Sanawy/KodasBasily/AwashyKodas.cshtml");
+        public IActionResult MagmaeTarhem() => View("~/Views/Alhan/Sanawy/KodasBasily/MagmaeTarhem.cshtml");
+        public IActionResult Kesma() => View("~/Views/Alhan/Sanawy/KodasBasily/Kesma.cshtml");
+        public IActionResult Eatraf() => View("~/Views/Alhan/Sanawy/KodasBasily/Eatraf.cshtml");
         //Tawzie
         public IActionResult TawzieSanawy() => View("~/Views/Alhan/Sanawy/Tawzie/TawzieSanawy.cshtml");
         public IActionResult EkEsmaroot() => View("~/Views/Alhan/Sanawy/Tawzie/EkEsmaroot.cshtml");
