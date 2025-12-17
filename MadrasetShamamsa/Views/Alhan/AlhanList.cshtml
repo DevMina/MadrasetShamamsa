@@ -1,6 +1,25 @@
 ﻿@{
     ViewData["Title"] = "الألحان";
+
+    var alhanList = new[]
+    {
+        new { Text = "الألحان السنوية", Controller = "Alhan", Action = "Sanawy" },
+        new { Text = "ألحان الأعياد السيدية الصغرى 1", Controller = "Alhan", Action = "" },
+        new { Text = "ألحان الأعياد السيدية الصغرى 2", Controller = "Alhan", Action = "" },
+        new { Text = "ألحان النيروز والصليب", Controller = "Alhan", Action = "" },
+        new { Text = "ألحان كيهك والميلاد", Controller = "Alhan", Action = "" },
+        new { Text = "ألحان الغطاس", Controller = "Alhan", Action = "" },
+        new { Text = "ألحان الصوم الكبير", Controller = "Alhan", Action = "" },
+        new { Text = "ألحان سبت لعازر وأحد الشعانين", Controller = "Alhan", Action = "" },
+        new { Text = "ألحان البصخة", Controller = "Alhan", Action = "" },
+        new { Text = "ألحان سبت الفرح", Controller = "Alhan", Action = "" },
+        new { Text = "ألحان الخمسين المقدسة", Controller = "Alhan", Action = "" },
+        new { Text = "ألحان صوم الرسل", Controller = "Alhan", Action = "" },
+        new { Text = "ألحان صوم السيدة العذراء", Controller = "Alhan", Action = "" },
+        new { Text = "ألحان التسبحة", Controller = "Alhan", Action = "" }
+    };
 }
+
 <!-- =======================
     HERO / INTRO SECTION
 ======================= -->
@@ -14,164 +33,43 @@
         </p>
     </div>
 </section>
+
 <!-- =======================
     MELODIES CARDS
 ======================= -->
 <section class="container py-5">
     <div class="row g-4">
-        <!-- Annual Melodies -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-calendar-alt fa-2x mb-3 text-primary"></i>
-                    <h4>الألحان السنوية</h4>
-                    <p class="flex-grow-1">ألحان ومردات القداسات السنوي</p>
-                    <a asp-controller="Alhan" asp-action="Sanawy" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
+        @foreach (var item in alhanList)
+        {
+            <div class="col-md-4">
+                @if (string.IsNullOrEmpty(item.Action))
+                {
+                    <div class="text-decoration-none">
+                        <div class="card text-center h-100 shadow-sm card-hover">
+                            <div class="card-body">
+                                <h5 class="mb-0 text-dark d-flex align-items-center justify-content-center gap-2">
+                                    <i class="fa-solid fa-cross fa-2x text-primary"></i>
+                                    <span>@item.Text</span>
+                                </h5>
+                                <small class="text-muted">قريباً</small>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <a asp-controller="@item.Controller" asp-action="@item.Action" class="text-decoration-none">
+                        <div class="card text-center h-100 shadow-sm card-hover">
+                            <div class="card-body">
+                                <h5 class="mb-0 text-dark d-flex align-items-center justify-content-center gap-2">
+                                    <i class="fa-solid fa-cross fa-2x text-primary"></i>
+                                    <span>@item.Text</span>
+                                </h5>
+                            </div>
+                        </div>
+                    </a>
+                }
             </div>
-        </div>
-        <!-- Annual Melodies -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-calendar-alt fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان الأعياد السيدية الصغرى 1</h4>
-                    <p class="flex-grow-1">ألحان أعياد الختان وعُرس قانا الجليل ودخول المسيح الهيكل</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
-        <!-- Annual Melodies -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-calendar-alt fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان الأعياد السيدية الصغرى 2</h4>
-                    <p class="flex-grow-1">ألحان أعياد البشارة ودخول المسيح أرض مصر والتجلي</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
-        <!-- Liturgy Melodies -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-church fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان النيروز والصليب</h4>
-                    <p class="flex-grow-1">ألحان عيد النيروز وعيدي الصليب و29 من الشهر القبطي</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
-        <!-- Nativity & Epiphany -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-star fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان كيهك والميلاد</h4>
-                    <p class="flex-grow-1">ألحان شهر كيهك وعيد الميلاد</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
-        <!-- Nativity & Epiphany -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-star fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان الغطاس</h4>
-                    <p class="flex-grow-1">ألحان عيد الغطاس واللقان</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
-        <!-- Lent -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-sun fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان الصوم الكبير</h4>
-                    <p class="flex-grow-1">ألحان الصوم الكبير وصوم نينوى</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
-        <!-- Easter Week -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-cross fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان سبت لعازر وأحد الشعانين</h4>
-                    <p class="flex-grow-1">ألحان سبت لعازر وأحد الشعانين</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
-        <!-- Easter Week -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-cross fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان البصخة</h4>
-                    <p class="flex-grow-1">ألحان أسبوع الآلام من ليلة الإثنين إلي الجمعه العظيمة</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
-        <!-- Resurrection -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-church fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان سبت الفرح</h4>
-                    <p class="flex-grow-1">ألحان سبت الفرح</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
-        <!-- Resurrection -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-church fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان الخمسين المقدسة</h4>
-                    <p class="flex-grow-1">ألحان عيد القيامه وأحد توما وعيد الصعود وعيد العنصرة</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
-        <!-- Resurrection -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-church fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان صوم الرسل</h4>
-                    <p class="flex-grow-1">ألحان صوم الرسل وعيد الرسل واللقان</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
-        <!-- Resurrection -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-church fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان صوم السيدة العذراء</h4>
-                    <p class="flex-grow-1">ألحان وتماجيد صوم السيدة العذراء وأعيادها</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
-        <!-- Resurrection -->
-        <div class="col-md-4">
-            <div class="card h-100 p-3 text-center">
-                <div class="card-body d-flex flex-column">
-                    <i class="fa-solid fa-church fa-2x mb-3 text-primary"></i>
-                    <h4>ألحان التسبحة</h4>
-                    <p class="flex-grow-1">ألحان وتماجيد التسبحة</p>
-                    <a href="#" class="btn btn-outline-primary mt-auto">عرض الألحان</a>
-                </div>
-            </div>
-        </div>
+        }
     </div>
 </section>
