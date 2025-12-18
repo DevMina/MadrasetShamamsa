@@ -7,11 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Alhan\Christmas\" />
     <Folder Include="Views\Alhan\Epiphany\" />
     <Folder Include="Views\Alhan\Great-Lent\" />
     <Folder Include="Views\Alhan\Holy-Week\" />
-    <Folder Include="Views\Alhan\Kiahk\" />
+    <Folder Include="Views\Alhan\KiahkChristmas\BaramonElMelad\RafaeBokhor\" />
+    <Folder Include="Views\Alhan\KiahkChristmas\BaramonElMelad\Tawzie\" />
+    <Folder Include="Views\Alhan\KiahkChristmas\EidElMelad\Kodas\" />
+    <Folder Include="Views\Alhan\KiahkChristmas\EidElMelad\RafaeBokhor\" />
+    <Folder Include="Views\Alhan\KiahkChristmas\EidElMelad\Tawzie\" />
   </ItemGroup>
 
   <ItemGroup>

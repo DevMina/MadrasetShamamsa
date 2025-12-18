@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "ألحان كيهك والميلاد";
+    var sections = new List<(string id, string name)>
+    {
+        ("1","رفع بخور عشية وباكر شهر كيهك"),
+        ("2","ألحان ومردات قداس شهر كيهك"),
+        ("3","ألحان ومدائح توزيع شهر كيهك"),
+        ("4","رفع بخور عشية وباكر برمون الميلاد"),
+        ("5","ألحان ومردات قداس برمون الميلاد"),
+        ("6","ألحان ومدائح توزيع برمون الميلاد"),
+        ("7","رفع بخور عشية وباكر عيد الميلاد"),
+        ("8","ألحان ومردات قداس عيد الميلاد"),
+        ("9","ألحان ومدائح توزيع عيد الميلاد")
+    };
+    var subSections = new List<(string sectionId, string name, string controller, string action)>
+    {
+        ("1", "ارباع الناقوس شهر كيهك","Alhan",""),
+        ("1", "ذكصولوجيات شهر كيهك","Alhan",""),
+        ("1", "المزمور والإنجيل شهر كيهك","Alhan",""),
+        ("1", "الختام شهر كيهك","Alhan",""),
+
+        ("2", "هيتينيات شهر كيهك","Alhan",""),
+        ("2", "مرد الإبركسيس شهر كيهك","Alhan",""),
+        ("2", "المزمور والإنجيل شهر كيهك","Alhan",""),
+        ("2", "اسبازموس واطس شهر كيهك","Alhan",""),
+        ("2", "اسبازموس آدام شهر كيهك","Alhan",""),
+
+        ("3", "توزيع شهر كيهك","Alhan",""),
+        ("3", "جي افسماروؤت شهر كيهك","Alhan",""),
+        ("3", "توزيع الايام كيهك: تي بارثينوس ماريام","Alhan",""),
+        ("3", "توزيع احاد كيهك: اف امبشا غار","Alhan",""),
+        ("3", "الختام شهر كيهك","Alhan",""),
+
+        ("4", "ارباع الناقوس برمون الميلاد","Alhan",""),
+        ("4", "ذكصولوجيات برمون الميلاد","Alhan",""),
+
+        ("7", "ارباع الناقوس عيد الميلاد","Alhan",""),
+        ("7", "ذكصولوجيات عيد الميلاد","Alhan",""),
+        ("7", "المزمور والإنجيل عيد الميلاد","Alhan",""),
+        ("7", "الختام عيد الميلاد","Alhan",""),
+
+    };
+}
+
+<section class="py-3 text-center bg-light">
+    <div class="container">
+        <h1 class="mb-3">ألحان كيهك والميلاد</h1>
+        <p class="lead text-muted">
+            ألحان ومدائح شهر كيهك، برمون عيد الميلاد، وعيد الميلاد المجيد
+        </p>
+    </div>
+</section>
+
+<section class="py-3">
+    <div class="container">
+        <div class="accordion" id="sectionsAccordion">
+            @foreach (var sec in sections)
+            {
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button @(sec.id != "1" ? "collapsed" : "")" type="button" data-bs-toggle="collapse" data-bs-target="#section@(sec.id.Trim())" aria-expanded="@(sec.id == "1" ? "true" : "false")" aria-controls="section@(sec.id.Trim())">
+                            <i class="fa-solid fa-cross mx-2"></i>
+                            @sec.name
+                        </button>
+                    </h2>
+                    <div id="section@(sec.id.Trim())" class="accordion-collapse collapse @(sec.id == "1" ? "show" : "")" data-bs-parent="#sectionsAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-4">
+                                @foreach (var subSec in subSections.Where(i => i.sectionId.Trim().Equals(sec.id.Trim())))
+                                {
+                                    if (!string.IsNullOrEmpty(subSec.action))
+                                    {
+                                        <div class="col-md-4">
+                                            <a asp-controller="@subSec.controller" asp-action="@subSec.action" class="text-decoration-none">
+                                                <div class="card text-center h-100 shadow-sm card-hover">
+                                                    <div class="card-body">
+                                                        <h5 class="mb-0 text-dark">@subSec.name</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="col-md-4">
+                                            <div class="text-decoration-none">
+                                                <div class="card text-center h-100 shadow-sm card-hover">
+                                                    <div class="card-body">
+                                                        <h5 class="mb-0 text-dark">@subSec.name</h5>
+                                                        <small class="text-muted">قريباً</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

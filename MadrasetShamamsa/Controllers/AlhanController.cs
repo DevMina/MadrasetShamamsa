@@ -10,10 +10,9 @@ namespace MadrasetShamamsa.Controllers
         {
             return View();
         }
-        public IActionResult Sanawy()
-        {
-            return View("~/Views/Alhan/Sanawy/Sanawy.cshtml");
-        }//RafaeBokhor
+        #region Sanawy
+        public IActionResult Sanawy() => View("~/Views/Alhan/Sanawy/Sanawy.cshtml");
+        //RafaeBokhor
         public IActionResult SalatElShokr() => View("~/Views/Alhan/Sanawy/RafaeBokhor/SalatElShokr.cshtml");
         public IActionResult ArbaeElnakos() => View("~/Views/Alhan/Sanawy/RafaeBokhor/ArbaeElnakos.cshtml");
         public IActionResult Awashy() => View("~/Views/Alhan/Sanawy/RafaeBokhor/Awashy.cshtml");
@@ -61,7 +60,44 @@ namespace MadrasetShamamsa.Controllers
         public IActionResult ElMagdLeManRafaaElSamawat() => View("~/Views/Alhan/Sanawy/Tawzie/ElMagdLeManRafaaElSamawat.cshtml");
         public IActionResult AbanaElLazy() => View("~/Views/Alhan/Sanawy/Tawzie/AbanaElLazy.cshtml");
         public IActionResult ElkhetamTawzie() => View("~/Views/Alhan/Sanawy/Tawzie/ElkhetamTawzie.cshtml");
+        #endregion Sanawy
+        #region KiahkChristmas
+        public IActionResult KiahkChristmas() => View("~/Views/Alhan/KiahkChristmas/Kiahk/KiahkChristmas.cshtml");
+        #region Kiahk
+        //rf3bkhor
+        public IActionResult ArbaeElnakosKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/ArbaeElnakosKiahk.cshtml");
+        public IActionResult ZoksologiatKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/ZoksologiatKiahk.cshtml");
+        public IActionResult MazmorEngelKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/MazmorEngelKiahk.cshtml");
+        public IActionResult ElkhetamKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/ElkhetamKiahk.cshtml");
+        //kodas
+        public IActionResult HetanyatKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/HetanyatKiahk.cshtml");
+        public IActionResult EbraksisKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/EbraksisKiahk.cshtml");
+        public IActionResult MazmorEngelKiahkKodas() => View("~/Views/Alhan/KiahkChristmas/Kiahk/MazmorEngelKiahkKodas.cshtml");
+        public IActionResult AsbazmosWatosKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/AsbazmosWatosKiahk.cshtml");
+        public IActionResult AsbazmosAdamKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/AsbazmosAdamKiahk.cshtml");
+        //tawze3
+        public IActionResult TawzieKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/TawzieKiahk.cshtml");
+        public IActionResult JeEfEsmarootKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/JeEfEsmarootKiahk.cshtml");
+        public IActionResult TawzieAyamKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/TawzieAyamKiahk.cshtml");
+        public IActionResult TawzieAhadKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/TawzieAhadKiahk.cshtml");
+        public IActionResult ElkhetamTawzieKiahk() => View("~/Views/Alhan/KiahkChristmas/Kiahk/ElkhetamTawzieKiahk.cshtml");
 
+        #endregion Kiahk
+        #region BaramonElMelad
+        //rf3bkhor
+        public IActionResult ArbaeElnakosBaramonElMelad() => View("~/Views/Alhan/KiahkChristmas/BaramonElMelad/ArbaeElnakosBaramonElMelad.cshtml");
+        public IActionResult ZoksologiatKiahkBaramonElMelad() => View("~/Views/Alhan/KiahkChristmas/BaramonElMelad/ZoksologiatKiahkBaramonElMelad.cshtml");
+
+        #endregion BaramonElMelad
+        #region EidElMelad
+        //rf3bkhor
+        public IActionResult ArbaeElnakosEidElMelad() => View("~/Views/Alhan/KiahkChristmas/EidElMelad/ArbaeElnakosEidElMelad.cshtml");
+        public IActionResult ZoksologiatEidElMelad() => View("~/Views/Alhan/KiahkChristmas/EidElMelad/ZoksologiatEidElMelad.cshtml");
+        public IActionResult MazmorEngelEidElMelad() => View("~/Views/Alhan/KiahkChristmas/EidElMelad/MazmorEngelEidElMelad.cshtml");
+        public IActionResult ElkhetamEidElMelad() => View("~/Views/Alhan/KiahkChristmas/EidElMelad/ElkhetamEidElMelad.cshtml");
+
+        #endregion EidElMelad
+        #endregion KiahkChristmas
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
