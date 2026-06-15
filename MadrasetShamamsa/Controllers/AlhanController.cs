@@ -1,4 +1,4 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using MadrasetShamamsa.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,10 +6,21 @@ namespace MadrasetShamamsa.Controllers
 {
     public class AlhanController : Controller
     {
+        List<string> maradatTawzie = new List<string>()
+        {
+            "<tr><td style=\"width:33%;\">يونان في بطن الحوت كمثال، المسيح في القبر ثلاثة أيام.</td><td style=\"width:33%;\">يوناه خين إثنيچي إمبي كيتوس كاطا إبتيبوس : إمبخرستوس خين بي إمهاڤ إن شومت إن إيهوؤو.</td><td style=\"width:33%; font-family:'CS New Athanasius'\" dir=\"ltr\">@Html.Raw(\"Iwna qen `;neji `mpikitoc kata `ptupoc @ `mP=,=c qen pi`mhau `nsomt `n`ehoou\")</td></tr>",
+            "<tr><td style=\"width:33%;\">يسوع المسيح صام عنا، أربعين يومًا وأربعين ليلة</td><td style=\"width:33%;\">آ إيسوس بخرستوس إرنستيڤين إإهري إيجون إن إهميه إن إيهوؤو نيم إهميه إن إيجوره</td><td style=\"width:33%; font-family:'CS New Athanasius'\" dir=\"ltr\">@Html.Raw(\"A I=y=c P=,=c ernycteuin `e`hryi `ejwn@ `n`hme `n`eho`ou nem `hme `n`ejwrh\")</td></tr>"
+        };
         public IActionResult AlhanList()
         {
             return View();
         }
+        #region shared
+        public IActionResult Tawzie()
+        {
+            return View("~/Views/Alhan/Sanawy/Tawzie/TawzieSanawy.cshtml");
+        }
+        #endregion shared
         #region Sanawy
         public IActionResult Sanawy() => View("~/Views/Alhan/Sanawy/Sanawy.cshtml");
         //RafaeBokhor
@@ -53,7 +64,6 @@ namespace MadrasetShamamsa.Controllers
         public IActionResult Kesma() => View("~/Views/Alhan/Sanawy/KodasBasily/Kesma.cshtml");
         public IActionResult Eatraf() => View("~/Views/Alhan/Sanawy/KodasBasily/Eatraf.cshtml");
         //Tawzie
-        public IActionResult TawzieSanawy() => View("~/Views/Alhan/Sanawy/Tawzie/TawzieSanawy.cshtml");
         public IActionResult EkEsmaroot() => View("~/Views/Alhan/Sanawy/Tawzie/EkEsmaroot.cshtml");
         public IActionResult BeOik() => View("~/Views/Alhan/Sanawy/Tawzie/BeOik.cshtml");
         public IActionResult EsmaaoYaShaabElMaseh() => View("~/Views/Alhan/Sanawy/Tawzie/EsmaaoYaShaabElMaseh.cshtml");
@@ -98,6 +108,12 @@ namespace MadrasetShamamsa.Controllers
 
         #endregion EidElMelad
         #endregion KiahkChristmas
+        #region ElSoomElKber
+        public IActionResult ElSoomElKber() => View("~/Views/Alhan/ElSoomElKber/ElSoomElKber.cshtml");
+        public IActionResult ZoksologiatElSoomElKber() => View("~/Views/Alhan/ElSoomElKber/ZoksologiatElSoomElKber.cshtml");
+        public IActionResult MaradElEngelElSoomElKber() => View("~/Views/Alhan/ElSoomElKber/MaradElEngelElSoomElKber.cshtml");
+        public IActionResult ElkhetamElSoomElKber() => View("~/Views/Alhan/ElSoomElKber/ElkhetamElSoomElKber.cshtml");
+        #endregion ElSoomElKber
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

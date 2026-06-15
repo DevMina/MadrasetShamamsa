@@ -1,4 +1,7 @@
-﻿<section class="container bg-white py-4">
+﻿@{
+    bool showElSoomElKber = ViewBag.showElSoomElKber == true;
+}
+<section class="container bg-white py-4">
     <div class="card shadow-sm mb-4">
         <div class="card-header bg-primary text-white text-center">
             <h5 class="mb-0">مزمور سبحوا الله</h5>
@@ -14,6 +17,26 @@
                                 @Html.Raw("`Cmov `evnov5 qen n3e0v t3rov `nta4 =a=l")
                             </td>
                         </tr>
+                        @if (!showElSoomElKber)
+                        {
+                            <tr>
+                                <td style="width:33%;">يونان في بطن الحوت كمثال، المسيح في القبر ثلاثة أيام.</td>
+                                <td style="width:33%;">يوناه خين إثنيچي إمبي كيتوس كاطا إبتيبوس : إمبخرستوس خين بي إمهاڤ إن شومت إن إيهوؤو.</td>
+                                <td style="width:33%; font-family:'CS New Athanasius'" dir="ltr">
+                                    @Html.Raw("Iwna qen `;neji `mpikitoc kata `ptupoc @ `mP=,=c qen pi`mhau `nsomt `n`ehoou")
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            <tr>
+                                <td style="width:33%;">يسوع المسيح صام عنا، أربعين يومًا وأربعين ليلة</td>
+                                <td style="width:33%;">آ إيسوس بخرستوس إرنستيڤين إإهري إيجون إن إهميه إن إيهوؤو نيم إهميه إن إيجوره</td>
+                                <td style="width:33%; font-family:'CS New Athanasius'" dir="ltr">
+                                    @Html.Raw("A I=y=c P=,=c ernycteuin `e`hryi `ejwn@ `n`hme `n`eho`ou nem `hme `n`ejwrh")
+                                </td>
+                            </tr>
+                        }
                         <tr>
                             <td style="width:33%;">سبحوه فى جلد قوته الليلويا</td>
                             <td style="width:33%;">اسمو ايروف خين بى تاجرو: انتى تيف جوم الليلويا</td>

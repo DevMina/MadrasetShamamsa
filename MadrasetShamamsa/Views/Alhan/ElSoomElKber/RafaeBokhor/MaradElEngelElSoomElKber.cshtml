@@ -1,0 +1,152 @@
+﻿@{
+    ViewData["Title"] = "ذوكصولوجيات";
+
+    var itemsList = new List<(string id, string title, string font, List<(string arabic, string pron, string coptic)> rows)>
+    {
+        ("maradengelsoomnenawa1", "مرد إنجيل باكر يوم الإثنين من صوم نينوى", "CS New Athanasius", new List<(string, string, string)>
+        {
+            (
+                "بل إصنع معنا يا سيدي، مثل أهل نينوى، الذين تابوا، فغَفَرت لهم خطاياهم",
+                "أللا باتشويس آري أووِّي نيه مان: إم إفريتي إنني ريم ني نيڤئي: ناي إيه طاف إيرميه طانين: أك كانو نوڤي نو أو إيڤول",
+                "Alla pa=o=c `ariou`i neman@ `m`vry] `nniremNineu`y@ nai `etauermetanoin@ ak,a nounobi nwou `ebol"
+            ),
+            (
+                "أطلب من الرب عنا، أيها الكاروز لأهل نينوي، يونان النبي، ليغفر لنا خطايانا",
+                "طوبه إم إبتشويس إيه إهري إيجون: أوبي ريفهي أويش إنتيه ني ريم ني نيڤي: يونا بي إبروفيتيس: إنتيف كانين نوڤي نان إيڤول",
+                "Twbh `m`P=o=c `e`hryi `ejwn@ `w pirefhiwis `nte niremNineu`y@ Iwna pi`provytyc@ `ntef,a nennobi nan `ebol"
+            ),
+            (
+                "لأنه مبارك الآب والإبن، والروح القدس، الثالوث الكامل، نسجد له ونمجده",
+                "چيه إف إسماروؤت إنچيه إفيوت نيم إبشيري: نيم بي إبنيڤما إثؤواب: تي إترياس إتچيك إيڤول: تين أوأوشت إمموس تين تي أوأوناس",
+                "Je `f`cmarwout `nje `Viwt nem `Psyri@ nem Pi`pneuma e;ouab }`triac etjyk `ebol@ tenouwst `mmoc ten]w`ou nac"
+            ),
+        }),
+        ("maradengelsoomnenawa2", "مرد إنجيل باكر يوم الثلاثاء من صوم نينوى", "CS New Athanasius", new List<(string, string, string)>
+        {
+            (
+                "أعطني يا رب توبة، لكي أتوب، قبل أن يغلق الموت فمي، في أبواب الجحيم",
+                "موي ني إبتشويس إن أوميه طانيَّا: إيه إبچين طا إيرميه طانين: إم باتيه إفمو ما إشطام إن رويْ: خين ني بيلي إنتيه آمينتي",
+                "Moinyi `P=o=c `noumetanoia@ `e`pjintaermetanoin@ `mpate `vmou ma`s;am `nrwi@ qen nipuly `nte `Amen]"
+            ),
+            (
+                "أطلب من الرب عنا، أيها الكاروز لأهل نينوي، يونان النبي، ليغفر لنا خطايانا",
+                "طوبه إم إبتشويس إيه إهري إيجون: أوبي ريفهي أويش إنتيه ني ريم ني نيڤي: يونا بي إبروفيتيس: إنتيف كانين نوڤي نان إيڤول",
+                "Twbh `m`P=o=c `e`hryi `ejwn@ `w pirefhiwis `nte niremNineu`y@ Iwna pi`provytyc@ `ntef,a nennobi nan `ebol"
+            ),
+            (
+                "لأنه مبارك الآب والإبن، والروح القدس، الثالوث الكامل، نسجد له ونمجده",
+                "چيه إف إسماروؤت إنچيه إفيوت نيم إبشيري: نيم بي إبنيڤما إثؤواب: تي إترياس إتچيك إيڤول: تين أوأوشت إمموس تين تي أوأوناس",
+                "Je `f`cmarwout `nje `Viwt nem `Psyri@ nem Pi`pneuma e;ouab }`triac etjyk `ebol@ tenouwst `mmoc ten]w`ou nac"
+            ),
+        }),
+        ("maradengelsoomnenawa3", "مرد إنجيل باكر يوم الأربعاء من صوم نينوى", "CS New Athanasius", new List<(string, string, string)>
+        {
+            (
+                "تعالوا إليَّ، يا مباركي أبي، رثوا الحياة، الدائمة إلى الأبد",
+                " چيه آمويني هاروي: ني إت إسمارؤوت إنتيه بايوت: آري إكليرونومين إم بي أونخ: إثمين إيڤول شا إيه نيه",
+                "Je `amwini haroi@ nyet`cmarwout `nte Paiwt@ `ari`klyronomin `mpiwnq@ e;myn `ebol sa `eneh"
+            ),
+            (
+                "أطلب من الرب عنا، أيها الكاروز لأهل نينوي، يونان النبي، ليغفر لنا خطايانا",
+                "طوبه إم إبتشويس إيه إهري إيجون: أوبي ريفهي أويش إنتيه ني ريم ني نيڤي: يونا بي إبروفيتيس: إنتيف كانين نوڤي نان إيڤول",
+                "Twbh `m`P=o=c `e`hryi `ejwn@ `w pirefhiwis `nte niremNineu`y@ Iwna pi`provytyc@ `ntef,a nennobi nan `ebol"
+            ),
+            (
+                "لأنه مبارك الآب والإبن، والروح القدس، الثالوث الكامل، نسجد له ونمجده",
+                "چيه إف إسماروؤت إنچيه إفيوت نيم إبشيري: نيم بي إبنيڤما إثؤواب: تي إترياس إتچيك إيڤول: تين أوأوشت إمموس تين تي أوأوناس",
+                "Je `f`cmarwout `nje `Viwt nem `Psyri@ nem Pi`pneuma e;ouab }`triac etjyk `ebol@ tenouwst `mmoc ten]w`ou nac"
+            ),
+        }),
+        ("maradengelsoomnenawa4", "مرد إنجيل باكر يوم الخميس من صوم نينوى", "Avva_Shenouda", new List<(string, string, string)>
+        {
+            (
+                "طهرنا يا رب من المكر : الذى لخمير الصدوقيين : لأننا فهمنا عجائبك : و أمنا بربوبيتك",
+                "ما توفون إبشويس ايفول خين بى إكروف : إنتى بى آتشيمير إننى سادوكيؤس : جيه آنكاتى اىه نيك إشفيرى : اووه آن ناهتى ايه تيك ميت تشويس",
+                "Matovbon Pu ebolqen pi`xro4 : `nte piat2em3r `nnicadovkeoc : ge anka5 `enek`2f3ri : ovoh annah5 `etekmetu"
+            ),
+            (
+                "أطلب من الرب عنا، أيها الكاروز لأهل نينوي، يونان النبي، ليغفر لنا خطايانا",
+                "طوبه إم إبتشويس إيه إهري إيجون: أوبي ريفهي أويش إنتيه ني ريم ني نيڤي: يونا بي إبروفيتيس: إنتيف كانين نوڤي نان إيڤول",
+                "Twbh `m`P=o=c `e`hryi `ejwn@ `w pirefhiwis `nte niremNineu`y@ Iwna pi`provytyc@ `ntef,a nennobi nan `ebol"
+            ),
+            (
+                "لأنه مبارك الآب والإبن، والروح القدس، الثالوث الكامل، نسجد له ونمجده",
+                "چيه إف إسماروؤت إنچيه إفيوت نيم إبشيري: نيم بي إبنيڤما إثؤواب: تي إترياس إتچيك إيڤول: تين أوأوشت إمموس تين تي أوأوناس",
+                "Je `f`cmarwout `nje `Viwt nem `Psyri@ nem Pi`pneuma e;ouab }`triac etjyk `ebol@ tenouwst `mmoc ten]w`ou nac"
+            ),
+        }),
+        ("maradengelelsoomelkber", "مرد إنجيل باكر أيام الصوم المقدس", "CS New Athanasius", new List<(string, string, string)>
+        {
+            (
+                "سلام الله الذي، يفوق كل عقل، يحل في قلوبكم، بالمسيح يسوع ربنا",
+                "تي هيريني إنتيه إفنوتي: ثي إيت تشوسي إيه نوس نيڤين: إس إيه آريه إن نيه تين هيت: خين بخرستوس إيسوس بين تشويس",
+                "}hiryny `nte `V]@ vy`et[oci `enouc niben@ ec`e`areh qen netenhyt@ qen P=,=c I=y=c pen=o=c"
+            ),
+            (
+                "أخطأت أخطأت، يا ربي يسوع إغفر لي، لأنه ليس عبد بلا خطية، ولا سيد بلا غفران",
+                "آيْ إيرنوڤي آيْ إيرنوڤي: باتشويس إيسوس كوني إيڤول: چيه إممون ڤوك إن أت إيرنوفي: أوذيه إم مون تشويْس إن أتكو إيڤول",
+                "Ai`ernobi ai`ernobi@ pa=o=c I=y=c ,w nyi `ebol@ je `mmon bwk `n`at`ernobi@  `oude `mmon `[oic `n`at,w `ebol"
+            ),
+            (
+                "أبانا الذي في السموات، ليتقدس إسمك، ليأت ملكوتك، لأن لك المجد إلي الابد",
+                "چيه بينيوت إتخين ني فيؤوِّي: ماريف طوڤو إنچيه بيكران: ماريس إي إنچيه تيك ميت أورو: چيه فوك بيه بي أوأو شا ني إيه نيه",
+                "Je penIwt etqen nivy`ou`i@ mareftoubo `nje pekran@ mareci `nje tekmet`ouro@ je vwk pe pi`w`ou sa ni`eneh"
+            ),
+            (
+                "لأنه مبارك الآب والإبن، والروح القدس، الثالوث الكامل، نسجد له ونمجده",
+                "چيه إف إسماروؤت إنچيه إفيوت نيم إبشيري: نيم بي إبنيڤما إثؤواب: تي إترياس إتچيك إيڤول: تين أوأوشت إمموس تين تي أوأوناس",
+                "Je `f`cmarwout `nje `Viwt nem `Psyri@ nem Pi`pneuma e;ouab }`triac etjyk `ebol@ tenouwst `mmoc ten]w`ou nac"
+            ),
+        }),
+    };
+}
+
+<section class="container py-4 text-center bg-white mb-4">
+    <div>
+        <h1 class="mb-3">
+            <i class="fa-solid fa-hands-praying mx-2 text-primary"></i>
+            مرد إنجيل باكر
+        </h1>
+    </div>
+</section>
+
+<section class="container bg-white py-4">
+    <div class="accordion" id="itemAccordion">
+        @foreach (var item in itemsList)
+        {
+            <div class="accordion-item mb-3 shadow-sm">
+                <h2 class="accordion-header" id="heading@(item.id)">
+                    <button class="accordion-button @(item.id != "maradengelsoomnenawa1" ? "collapsed" : "")"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse@(item.id)"
+                            aria-expanded="@(item.id == "maradengelsoomnenawa1" ? "true" : "false")"
+                            aria-controls="collapse@(item.id)">
+                        @item.title
+                    </button>
+                </h2>
+                <div id="collapse@(item.id)"
+                     class="accordion-collapse collapse @(item.id == "maradengelsoomnenawa1" ? "show" : "")"
+                     aria-labelledby="heading@(item.id)"
+                     data-bs-parent="#itemAccordion">
+                    <div class="accordion-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped mb-0 text-center align-middle">
+                                <tbody>
+                                    @foreach (var row in item.rows)
+                                    {
+                                        <tr>
+                                            <td style="width:33%;">@row.arabic</td>
+                                            <td style="width:33%;">@row.pron</td>
+                                            <td style="width:33%; font-family: '@item.font'; font-size: 16pt;" dir="ltr">@Html.Raw(row.coptic)</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

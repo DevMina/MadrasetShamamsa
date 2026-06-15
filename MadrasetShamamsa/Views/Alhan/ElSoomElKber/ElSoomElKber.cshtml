@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "ألحان صوم نينوى والصوم الكبير";
+    var sections = new List<(string id, string name)>
+    {
+        ("1","رفع بخور عشية وباكر"),
+        // ("2","ألحان قداس الموعوظين"),
+        // ("3","ألحان ومردات القداس الباسيلي"),
+        // ("4","ألحان ومدائح التوزيع السنوي")
+    };
+    var subSections = new List<(string sectionId, string name, string controller, string action)>
+    {
+        ("1", "الذكصولوجيات","Alhan","ZoksologiatElSoomElKber"),
+        ("1", "مردات الإنجيل","Alhan","MaradElEngelElSoomElKber"),
+        ("1", "الختام","Alhan","ElkhetamElSoomElKber"),
+
+        // ("2", "لحن البركة","Alhan","LahnAlbaraka"),
+        // ("2", "لحن إك إسماروؤت","Alhan","LahnEkEsmaroot"),
+        // ("2", "لحن إفلوجيمنوس","Alhan","LahnEflogemenos"),
+        // ("2", "لحن إبؤرو","Alhan","LahnEbooro"),
+        // ("2", "لحن اللي القربان + آبيناف شوبي ","Alhan","LahnAllyAbinaf"),
+        // ("2", "أوشية القرابين","Alhan","OshytElKarabin"),
+        // ("2", "لحن الليلويا","Alhan","LahnAlleloya"),
+        // ("2", "إسباتير","Alhan","Esbater"),
+        // ("2", "صلاة الشكر","Alhan","SalatElShokrKodas"),
+        // ("2", "لحن سوتيس آمين + لحن ني صافيف","Alhan","SotesNeSavef"),
+        // ("2", "لحن طاي شوري + تي شوري","Alhan","TayShoryTeShory"),
+        // ("2", "الهيتينيات","Alhan","Hetanyat"),
+        // ("2", "البولس قبطي","Alhan","BolesCoptic"),
+        // ("2", "بي إهموت غار","Alhan","BeEhmotGhar"),
+        // ("2", "مرد الكاثوليكون","Alhan","Katholikon"),
+        // ("2", "الكاثوليكون قبطي","Alhan","KatholikonCoptic"),
+        // ("2", "مرد الإبركسيس","Alhan","Ebraksis"),
+        // ("2", "الإبركسيس قبطي","Alhan","EbraksisCoptic"),
+        // ("2", "المزمور والإنجيل","Alhan","MazmorEngel"),
+        // ("2", "الأواشي بعد الإنجيل","Alhan","AwashyKodasMawozen"),
+        // ("2", "قانون الإيمان","Alhan","KanonElEman"),
+
+        // ("3", "صلاة الصلح","Alhan","SalatElSolhBasily"),
+        // ("3", "اسبازموس إفرحي يا مريم","Alhan","EfrahyYaMariam"),
+        // ("3", "قبلوا بعضكم بعضاً","Alhan","Kabelo"),
+        // ("3", "هيتين ني إبريسفيا + مستحق وعادل","Alhan","HetenNeEbresviaBasily"),
+        // ("3", "اسبازموس أيها الرب","Alhan","AyohaElRab"),
+        // ("3", "تسبحة الشاروبيم","Alhan","TasbehatElSharobem"),
+        // ("3", "مردات حتى الأواشي","Alhan","MaradatToAwashy"),
+        // ("3", "الأواشي","Alhan","AwashyKodas"),
+        // ("3", "المجمع والترحيم","Alhan","MagmaeTarhem"),
+        // ("3", "القسمة","Alhan","Kesma"),
+        // ("3", "الإعتراف","Alhan","Eatraf"),
+
+        // ("4", "التوزيع السنوي","Alhan","TawzieSanawy"),
+        // ("4", "إك إسماروؤت","Alhan","EkEsmaroot"),
+        // ("4", "بي أويك","Alhan","BeOik"),
+        // ("4", "مديح اسمعوا يا شعب المسيح","Alhan","EsmaaoYaShaabElMaseh"),
+        // ("4", "مديح المجد لمن رفع السموات","Alhan","ElMagdLeManRafaaElSamawat"),
+        // ("4", "مديح أبانا الذي في السموات","Alhan","AbanaElLazy"),
+        // ("4", "الختام","Alhan","ElkhetamTawzie")
+    };
+}
+
+<section class="py-3 text-center bg-light">
+    <div class="container">
+        <h1 class="mb-3">ألحان السنوي</h1>
+        <p class="lead text-muted">
+            الألحان التي تُرتَّل في الأيام العادية طوال السنة القبطية خارج المواسم الكبرى.
+        </p>
+    </div>
+</section>
+
+<section class="py-3">
+    <div class="container">
+        <div class="accordion" id="sectionsAccordion">
+            @foreach (var sec in sections)
+            {
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button @(sec.id != "1" ? "collapsed" : "")" type="button" data-bs-toggle="collapse" data-bs-target="#section@(sec.id.Trim())" aria-expanded="@(sec.id == "1" ? "true" : "false")" aria-controls="section@(sec.id.Trim())">
+                            <i class="fa-solid fa-cross mx-2"></i>
+                            @sec.name
+                        </button>
+                    </h2>
+                    <div id="section@(sec.id.Trim())" class="accordion-collapse collapse @(sec.id == "1" ? "show" : "")" data-bs-parent="#sectionsAccordion">
+                        <div class="accordion-body">
+                            <div class="row g-4">
+                                @foreach (var subSec in subSections.Where(i => i.sectionId.Trim().Equals(sec.id.Trim())))
+                                {
+                                    if (!string.IsNullOrEmpty(subSec.action))
+                                    {
+                                        <div class="col-md-4">
+                                            <a asp-controller="@subSec.controller" asp-action="@subSec.action" class="text-decoration-none">
+                                                <div class="card text-center h-100 shadow-sm card-hover">
+                                                    <div class="card-body">
+                                                        <h5 class="mb-0 text-dark">@subSec.name</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="col-md-4">
+                                            <div class="text-decoration-none">
+                                                <div class="card text-center h-100 shadow-sm card-hover">
+                                                    <div class="card-body">
+                                                        <h5 class="mb-0 text-dark">@subSec.name</h5>
+                                                        <small class="text-muted">قريباً</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

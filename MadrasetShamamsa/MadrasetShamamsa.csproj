@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Alhan\Epiphany\" />
-    <Folder Include="Views\Alhan\Great-Lent\" />
     <Folder Include="Views\Alhan\Holy-Week\" />
     <Folder Include="Views\Alhan\KiahkChristmas\BaramonElMelad\RafaeBokhor\" />
     <Folder Include="Views\Alhan\KiahkChristmas\BaramonElMelad\Tawzie\" />
